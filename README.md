@@ -1,6 +1,23 @@
 # f0rm4t_infra
 f0rm4t Infra repository
 
+# HW-05 Base packer
+
+В директории `packer` находятся шаблоны для создания базового (`ubuntu16.json`) и immutable (`immutable.json`) образов. Пользовательские переменные, необходимые для сборки, доступны в примере `packer/variables.json.example`
+
+Создание образов:
+
+```bash
+packer build -var-file=variables.json ubuntu16.json
+packer build -var-file=variables.json immutable.json
+```
+
+Создание инстанса приложениия на GCP
+
+```bash
+./config-scripts/create-reddit-vm.sh
+```
+
 # HW-04 GCP + cloud-testapp
 
 Конфигурация
