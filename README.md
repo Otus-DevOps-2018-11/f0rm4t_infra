@@ -1,6 +1,17 @@
 # f0rm4t_infra
 f0rm4t Infra repository
 
+# HW-06 Terraform #1
+
+Добавлена кофигурация для разворачивания инстанса с приложением через terraform.
+
+Перед запуском необходимо скопировать файл `terraform/terraform.tfvars.example` в `terraform/terraform.tfvars` и внести в него необходимые изменения.
+
+```bash
+terraform plan
+terraform apply
+```
+
 # HW-05 Base packer
 
 В директории `packer` находятся шаблоны для создания базового (`ubuntu16.json`) и immutable (`immutable.json`) образов. Пользовательские переменные, необходимые для сборки, доступны в примере `packer/variables.json.example`
