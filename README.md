@@ -1,6 +1,26 @@
 # f0rm4t_infra
 f0rm4t Infra repository
 
+# HW-07 Terraform #2
+
+Информация о состоянии инстансов хранится в бакете на GCS. Для создания бакетов необходимо применить конфигурацию из директории `terraform`, предварительно скопировав и изменив файл переменных `terraform.tfvars.example`
+
+```bash
+terraform init
+terraform apply
+```
+
+Конфигурация разделена на два окружения:
+1. prod - `terraform/prod`
+2. stage - `terraform/stage`
+
+В каждой из конфигураций имеется аналогичный пример файла переменных - `terraform.tfvars.example`.
+
+Конфигурация инстансов приложения и БД вынесена в модули:
+
+1. app - `terraform/modules/app`
+2. db - `terraform/modules/db`
+
 # HW-06 Terraform #1
 
 Добавлена кофигурация для разворачивания инстанса с приложением через terraform.
