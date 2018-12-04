@@ -1,6 +1,25 @@
 # f0rm4t_infra
 f0rm4t Infra repository
 
+# HW-08 Ansible #1
+
+Добавлена начальная конфигурация ansible с примерами inventory-файлов (директория `./ansible`).
+
+```bash
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+ansible all -m ping
+```
+
+Добавлен файл генерации inventory в формате JSON, в который необходимо передать переменную окружения `ENV`:
+
+```bash
+ENV=stage ansible all -i inventory.py -m ping
+```
+
+
 # HW-07 Terraform #2
 
 Информация о состоянии инстансов хранится в бакете на GCS. Для создания бакетов необходимо применить конфигурацию из директории `terraform`, предварительно скопировав и изменив файл переменных `terraform.tfvars.example`
