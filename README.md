@@ -1,6 +1,32 @@
 # f0rm4t_infra
 f0rm4t Infra repository
 
+# HW-09 Ansible #2
+
+Добавлена несколько вариантов конфигурации ansible.
+
+1. Один сценарий в одном плейбуке:
+
+```bash
+ansible-playbook reddit_app_one_play.yml --limit app --tags app-tag
+ansible-playbook reddit_app_one_play.yml --limit db --tags db-tag
+```
+
+2. Несколько сценариев в одном плейбуке:
+
+```bash
+ansible-playbook reddit_app_multiple_plays.yml --tags app-tag
+ansible-playbook reddit_app_multiple_plays.yml --tags db-tag
+```
+
+3. Несколько сценариев в разных плейбуках:
+
+```bash
+ansible-playbook site.yml
+```
+
+Packer использует конфигурацию ansbile - packer_app.yml и packer_db.yml
+
 # HW-08 Ansible #1
 
 Добавлена начальная конфигурация ansible с примерами inventory-файлов (директория `./ansible`).
