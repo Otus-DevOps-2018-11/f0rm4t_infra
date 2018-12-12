@@ -1,7 +1,23 @@
 # f0rm4t_infra
 f0rm4t Infra repository
 
-# HW-10 Ansible #2
+# HW-11 Ansible #4
+
+Установка ruby и bundler вынесена в таски роли `app`. Установка MongoDB вынесена в таски роли `db`.
+
+Добавлена конфигурация Vagrant для тестирования сценариев.
+
+```bash
+vagrant up
+```
+
+Добавлены тесты для роли `db` (`./ansible/roles/db`):
+
+```bash
+molecule test
+```
+
+# HW-10 Ansible #3
 
 Оставлен один актуальный вариант конфигурации ansible
 
