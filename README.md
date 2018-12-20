@@ -1,6 +1,25 @@
 # f0rm4t_infra
 f0rm4t Infra repository
 
+# HW-10 Ansible #2
+
+Оставлен один актуальный вариант конфигурации ansible
+
+```bash
+ansible-playbook playbooks/site.yml #stage env
+ansible-playbook -i environments/prod/inventory playbooks/site.yml #prod env
+```
+
+Старые конфигурационные файлы перенесены в `./old`.
+
+Установка зависимостей:
+
+```bash
+ansible-galaxy install -r environments/stage/requirements.txt
+```
+
+В инстансах добавляются новые пользователи, данные которые находятся в зашифрованных файлах: `./environments/{prod,stage}/credentials.yml`. Для расшифровки файлов требуется файл с ключем - `vault.key`
+
 # HW-09 Ansible #2
 
 Добавлена несколько вариантов конфигурации ansible.
