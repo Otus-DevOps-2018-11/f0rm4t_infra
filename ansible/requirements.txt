@@ -48,7 +48,7 @@ python-dateutil==2.7.5
 python-gilt==1.2.1
 python-terraform==0.10.0
 python-vagrant==0.5.15
-PyYAML==3.13
+PyYAML==5.4
 requests==2.21.0
 sh==1.12.14
 six==1.11.0
